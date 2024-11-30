@@ -68,14 +68,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_CAPS,  LCTL(KC_1),  LCTL(KC_2),  LCTL(KC_3),  LCTL(KC_4),  LCTL(KC_5),  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
         _______,  LCTL(KC_A),  KC_UP,    KC_ESC,   KC_DOT,   KC_HOME,  _______,  KC_7,     KC_8,     KC_9,     KC_MINS,  KC_PGUP,    _______,  _______,            _______,
         _______,  KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_BSPC,  KC_END,   KC_SLSH,  KC_4,     KC_5,     KC_6,     KC_PLUS,  KC_PGDN,              _______,            _______,
-        _______,            _______,  MO(L2),   LCTL(LSFT(KC_TAB)),  LCTL(KC_TAB),  _______,  KC_ASTR,  KC_1,     KC_2,     KC_3,     KC_0,              _______,  _______,
+        _______,            KC_LSFT,  MO(L2),   LCTL(LSFT(KC_TAB)),  LCTL(KC_TAB),  _______,  KC_ASTR,  KC_1,     KC_2,     KC_3,     KC_0,              _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
 
     [L2] = LAYOUT_ansi_82(
         _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  _______,            _______,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,  _______,    _______,  _______,            _______,
-        _______,  _______,  _______,  LCTL(KC_LEFT),  _______,  _______,  _______,  KC_DLR,   KC_PERC,  KC_CIRC,  _______,  _______,              _______,            _______,
+        _______,  _______,  _______,  LCTL(KC_LEFT),  KC_NUM,   _______,  _______,  KC_DLR,   KC_PERC,  KC_CIRC,  _______,  _______,              _______,            _______,
         _______,            _______,  _______,  LCTL(KC_RGHT),  _______,  _______,  KC_UNDS,  KC_EXLM,  KC_AT,  KC_HASH,  _______,              _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
 
