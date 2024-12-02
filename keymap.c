@@ -53,20 +53,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,    KC_RBRC,  KC_BSLS,            KC_PGDN,
         MO(LAY),  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,              KC_ENT,             KC_HOME,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,              KC_RSFT,  KC_UP,
-        KC_LCTL,  KC_LCMD,  KC_LALT,                                KC_SPC,                                 KC_RALT,  MO(WIN_FN), KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_LCTL,  KC_LCMD,  KC_LALT,                                KC_SPC,                                 MO(WIN_FN),  KC_RALT, KC_RCTL,  KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [WIN_FN] = LAYOUT_ansi_82(
         _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  _______,            _______,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
-        RM_TOGG,  RM_NEXT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_SPDU,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
-        _______,  RM_PREV,  RM_VALD,  RM_HUED,  RM_SATD,  RM_SPDD,  _______,  _______,  _______,  _______,  _______,  _______,              _______,            _______,
+        _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,  _______,            _______,
+        RM_TOGG,  RM_NEXT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_SPDU,  _______,  _______,  _______,  _______,  KC_UP,  _______,    _______,  _______,            _______,
+        _______,  RM_PREV,  RM_VALD,  RM_HUED,  RM_SATD,  RM_SPDD,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_RGHT,              _______,            _______,
         _______,            _______,  _______,  _______,  _______,  _______,  NK_TOGG,  _______,  _______,  _______,  _______,              _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
     
     [LAY] = LAYOUT_ansi_82(
         _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  KC_CAPS,            _______,
-        LCTL(KC_1),  LCTL(KC_C),  LCTL(KC_V),  LCTL(KC_W),  LCTL(KC_F),  LCTL(KC_T),  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
-        LCTL(KC_L),  LCTL(KC_A),  KC_UP,    KC_ESC,   KC_DOT,   KC_HOME,  KC_TASK,  KC_7,     KC_8,     KC_9,     KC_MINS,  KC_PGUP,    _______,  _______,            _______,
+        LCTL(KC_1),  LCTL(KC_C),  LCTL(KC_V),  LCTL(KC_W),  LCTL(KC_F),  LCTL(KC_T),  LCTL(KC_P),  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,    _______,  _______,            _______,
+        LCTL(KC_L),  LCTL(KC_A),  KC_UP,    KC_ESC,   KC_DOT,   KC_HOME,  KC_TASK,  KC_7,     KC_8,     KC_9,     KC_MINS,  KC_PGUP,    KC_COMM,  _______,            _______,
         _______,  KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_BSPC,  KC_END,   KC_SLSH,  KC_4,     KC_5,     KC_6,     KC_PLUS,  KC_PGDN,              _______,            _______,
         _______,            KC_LSFT,  MO(L2),   LCTL(KC_PGUP),  LCTL(KC_PGDN),  LCTL(KC_Z),  KC_ASTR,  KC_1,     KC_2,     KC_3,     KC_0,              _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [L2] = LAYOUT_ansi_82(
         _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  _______,            _______,
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,  _______,    _______,  _______,            _______,
+        _______,  LCTL(LALT(KC_DEL)),  _______,  _______,  _______,  _______,  _______,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,  _______,    _______,  _______,            _______,
         _______,  KC_SCRL,  _______,  LCTL(KC_LEFT),  KC_NUM,   _______,  _______,  KC_DLR,   KC_PERC,  KC_CIRC,  _______,  _______,              _______,            _______,
         _______,            _______,  _______,  LCTL(KC_RGHT),  KC_LEFT,  _______,  KC_UNDS,  KC_EXLM,  KC_AT,  KC_HASH,  _______,              _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
