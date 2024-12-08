@@ -29,6 +29,17 @@ enum layers{
     ML2,
 };
 
+enum{
+    TD_LOOK,
+};
+
+// Tap Dance definitions
+tap_dance_action_t tap_dance_actions[] = {
+    // Tap once for Escape, twice for Caps Lock
+    [TD_LOOK] = ACTION_TAP_DANCE_DOUBLE(LCTL(KC_F), LCTL(KC_P)),
+};
+
+
 #define KC_TASK LGUI(KC_TAB)
 #define KC_FLXP LGUI(KC_E)
 
@@ -67,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
     [LAY] = LAYOUT_ansi_82(
         _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  KC_CAPS,            _______,
-        LCTL(KC_1),  LCTL(KC_C),  LCTL(KC_V),  LCTL(KC_W),  LCTL(KC_F),  LCTL(KC_T),  LCTL(KC_P),  _______,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,  _______,            _______,
+        LCTL(KC_1),  LCTL(KC_C),  LCTL(KC_V),  LCTL(KC_W),  TD(TD_LOOK),  LCTL(KC_T),  LCTL(KC_P),  _______,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,  _______,            _______,
         LCTL(KC_L),  LCTL(KC_A),  KC_UP,    KC_ESC,   KC_DOT,   KC_HOME,  KC_TASK,  KC_7,     KC_8,     KC_9,     KC_MINS,  KC_PGUP,    KC_COMM,  _______,            _______,
         _______,  KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_BSPC,  KC_END,   KC_SLSH,  KC_4,     KC_5,     KC_6,     KC_PLUS,  KC_PGDN,              _______,            _______,
         _______,            KC_LSFT,  MO(L2),   LCTL(KC_PGUP),  LCTL(KC_PGDN),  LCTL(KC_Z),  KC_ASTR,  KC_1,     KC_2,     KC_3,     KC_0,              _______,  _______,
