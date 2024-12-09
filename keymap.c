@@ -34,6 +34,9 @@ enum{
     TD_SPACE,
 };
 
+#define KC_TASK LGUI(KC_TAB)
+#define KC_FLXP LGUI(KC_E)
+
 typedef struct {
     uint16_t tap;
     uint16_t hold;
@@ -91,8 +94,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-#define KC_TASK LGUI(KC_TAB)
-#define KC_FLXP LGUI(KC_E)
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MAC_BASE] = LAYOUT_ansi_82(
@@ -129,7 +131,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
     [LAY] = LAYOUT_ansi_82(
         _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  KC_CAPS,            _______,
-        LCTL(KC_1),  LCTL(KC_C),  LCTL(KC_V),  LCTL(KC_W),  TD(TD_LOOK),  LCTL(KC_T),  _______,  _______,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,  _______,            _______,
+        LCTL(KC_1),  LCTL(KC_C),  LCTL(KC_V),  LCTL(KC_W),  TD(TD_LOOK),  LCTL(KC_T),  KC_FLXP,  _______,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,  _______,            _______,
         LCTL(KC_L),  LCTL(KC_A),  KC_DOT,     KC_UP,   LCTL(KC_PGUP),   KC_HOME,  KC_TASK,  KC_7,     KC_8,     KC_9,     KC_MINS,  KC_PGUP,    KC_COMM,  _______,            _______,
         _______,  KC_ESC,  KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_END,   KC_SLSH,  KC_4,     KC_5,     KC_6,     KC_PLUS,  KC_PGDN,              _______,            _______,
         _______,            KC_LSFT,  MO(L2),   KC_BSPC,  LCTL(KC_PGDN),  LCTL(KC_Z),  KC_ASTR,  KC_1,     KC_2,     KC_3,     KC_0,              _______,  _______,
