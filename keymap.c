@@ -32,6 +32,7 @@ enum layers{
 enum{
     TD_LOOK,
     TD_SPACE,
+    TD_FOLD,
 };
 
 #define KC_TASK LGUI(KC_TAB)
@@ -78,6 +79,7 @@ tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Escape, twice for Caps Lock
     [TD_LOOK] = ACTION_TAP_DANCE_DOUBLE(LCTL(KC_F), LCTL(KC_P)),
     [TD_SPACE] = ACTION_TAP_DANCE_TAP_HOLD(KC_SPC, KC_LSFT),
+    [TD_FOLD] = ACTION_TAP_DANCE_DOUBLE(KC_FLXP, KC_ENT),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -125,13 +127,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  _______,            _______,
         _______,  KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,     KC_F12,  _______,            _______,
         RM_TOGG,  RM_NEXT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_SPDU,  _______,  _______,  _______,  KC_UP,    KC_VOLD,  KC_VOLU,    _______,  _______,            _______,
-        _______,  RM_PREV,  RM_VALD,  RM_HUED,  RM_SATD,  RM_SPDD,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_RGHT,  _______,              _______,            _______,
-        _______,            _______,  _______,  _______,  _______,  _______,  NK_TOGG,  _______,  KC_MPRV,  KC_MPLY,  KC_MNXT,              _______,  _______,
+        _______,  RM_PREV,  RM_VALD,  RM_HUED,  RM_SATD,  RM_SPDD,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_RCMD,              _______,            _______,
+        _______,            _______,  _______,  _______,  _______,  _______,  NK_TOGG,  KC_ESC,   KC_MPRV,  KC_MPLY,  KC_MNXT,              _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
     
     [LAY] = LAYOUT_ansi_82(
         _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  KC_CAPS,            _______,
-        LCTL(KC_1),  LCTL(KC_C),  LCTL(KC_V),  LCTL(KC_W),  TD(TD_LOOK),  LCTL(KC_T),  KC_FLXP,  _______,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,  _______,            _______,
+        LCTL(KC_1),  LCTL(KC_C),  LCTL(KC_V),  LCTL(KC_W),  TD(TD_LOOK),  LCTL(KC_T),  TD(TD_FOLD),  _______,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,  _______,            _______,
         LCTL(KC_L),  LCTL(KC_A),  KC_DOT,     KC_UP,   LCTL(KC_PGUP),   KC_HOME,  KC_TASK,  KC_7,     KC_8,     KC_9,     KC_MINS,  KC_PGUP,    KC_COMM,  _______,            _______,
         _______,  KC_ESC,  KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_END,   KC_SLSH,  KC_4,     KC_5,     KC_6,     KC_PLUS,  KC_PGDN,              _______,            _______,
         _______,            KC_LSFT,  MO(L2),   KC_BSPC,  LCTL(KC_PGDN),  LCTL(KC_Z),  KC_ASTR,  KC_1,     KC_2,     KC_3,     KC_0,              _______,  _______,
