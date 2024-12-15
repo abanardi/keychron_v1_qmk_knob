@@ -134,9 +134,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [LAY] = LAYOUT_ansi_82(
         _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,  RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,    KC_VOLU,  KC_CAPS,            _______,
         LCTL(KC_1),  LCTL(KC_C),  LCTL(KC_V),  LCTL(KC_W),  TD(TD_LOOK),  LCTL(KC_T),  TD(TD_FOLD),  _______,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,  _______,            _______,
-        LCTL(KC_L),  LCTL(KC_A),  KC_DOT,     KC_UP,   LCTL(KC_PGUP),   KC_HOME,  KC_TASK,  KC_7,     KC_8,     KC_9,     KC_MINS,  KC_PGUP,    KC_COMM,  _______,            _______,
-        _______,  KC_ESC,  KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_END,   KC_SLSH,  KC_4,     KC_5,     KC_6,     KC_PLUS,  KC_PGDN,              _______,            _______,
-        _______,            KC_LSFT,  MO(L2),   KC_BSPC,  LCTL(KC_PGDN),  LCTL(KC_Z),  KC_ASTR,  KC_1,     KC_2,     KC_3,     KC_0,              _______,  _______,
+        LCTL(KC_L),  LCTL(KC_A),  KC_GRV,      KC_UP,   LCTL(KC_PGUP),   KC_HOME,  KC_TASK,  KC_7,     KC_8,     KC_9,     KC_MINS,  KC_COMM,    KC_PGUP,  _______,            _______,
+        _______,  KC_ESC,  KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_END,   KC_SLSH,  KC_4,     KC_5,     KC_6,     KC_PLUS,  KC_DOT,              _______,            _______,
+        _______,            KC_LSFT,  MO(L2),   KC_BSPC,  LCTL(KC_PGDN),  LCTL(KC_Z),  KC_ASTR,  KC_1,     KC_2,     KC_3,     KC_0,              KC_PGDN,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
 
     [L2] = LAYOUT_ansi_82(
@@ -144,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,  _______,            _______,
         _______,  LCTL(LALT(KC_DEL)),  _______,  _______,  _______,  _______,  _______,  KC_AMPR,  KC_ASTR,  KC_LPRN,  KC_RPRN,  _______,    _______,  _______,            _______,
         _______,  KC_SCRL,  _______,  LCTL(KC_LEFT),  KC_NUM,   _______,  _______,  KC_DLR,   KC_PERC,  KC_CIRC,  KC_EQL,   _______,              _______,            _______,
-        _______,            _______,  _______,  LCTL(KC_RGHT),  KC_LEFT,  _______,  KC_UNDS,  KC_EXLM,  KC_AT,  KC_HASH,  _______,              _______,  _______,
+        _______,            _______,  _______,  LCTL(KC_RGHT),  _______,  _______,  KC_UNDS,  KC_EXLM,  KC_AT,  KC_HASH,  _______,              _______,  _______,
         _______,  _______,  _______,                                _______,                                _______,  _______,    _______,  _______,  _______,  _______),
         
     [MLAY] = LAYOUT_ansi_82(
